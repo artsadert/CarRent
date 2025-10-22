@@ -3,6 +3,7 @@ services:
     container_name: database_postgres
     build:
       context: .
+      dockerfile: ./docker/database/Dockerfile
     environment:
       POSTGRES_USER: ${DB_USERNAME?error} 
       POSTGRES_PASSWORD: ${DB_PASSWORD?error}
